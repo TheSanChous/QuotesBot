@@ -17,6 +17,7 @@ class QuotesRepository:
     async def get_random() -> Quote:
         async with aiohttp.ClientSession() as session:
             session.headers.add('Authorization', f'Token token="{QUOTES_TOKEN}"')
+            session.headers.add('Content-Type', f'application/json')
             async with session.get(QuotesRepository.apiUrl+QuotesRepository.quoteOfTheDay) as response:
                 squote = await response.text()
                 return Quote(json.loads(squote)['quote'])

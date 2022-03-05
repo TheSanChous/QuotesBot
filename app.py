@@ -6,7 +6,6 @@ from utils.db_api.database import DbContext
 from utils.dbstorage.dbstorage import DbStorage
 from utils.notify_admins import on_startup_notify
 from utils.set_bot_commands import set_default_commands
-
 import handlers
 
 
