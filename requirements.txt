@@ -4,3 +4,4 @@ pypika==0.48.8
 pyodbc~=4.0.32
 aiohttp~=3.8.1
 translators~=5.0.1
+mysql-connector-python~=8.0.28

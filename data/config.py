@@ -10,7 +10,7 @@ IP = env.str("ip")  # Тоже str, но для айпи адреса хоста
 
 DB_SERVER = env.str("DB_SERVER")
 DB_USER = env.str("DB_USER")
-DB_PASSWORD = env.str("DB_PASSWORD")
+PASSWORD = env.str("PASSWORD")
 DB_DATABASE = env.str("DB_DATABASE")
 DB = env.str("DB")
 

@@ -1,13 +1,20 @@
-import pyodbc
+import mysql.connector
 
 from utils.db_api.models.user import User
 
 from data import config
+import logging
 
 
 class DbContext:
     def __init__(self):
-        self.connection = pyodbc.connect(config.DB)
+        logging.info("open connection...")
+        self.connection = mysql.connector.connect(
+            host=config.DB_SERVER,
+            database=config.DB_DATABASE,
+            user=config.DB_USER,
+            password=config.PASSWORD)
+        logging.info("database connected!")
         self.cursor = self.connection.cursor()
 
     def close(self):
